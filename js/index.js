@@ -28,7 +28,7 @@
     }
 
     window.onbeforeunload = function(event) {
-        return '你确定要关闭窗口吗？系统将不会保存你的工作！';
+        return 'Are you sure you want to close the window? The system will not save your work!';
     }
 
     window.addEventListener('resize', onresize, false);
@@ -79,14 +79,14 @@
 
                 if (code.trim() === '') {
                     this.$Modal.warning({
-                        title: '生成代码失败',
-                        content: '生成代码失败，请书写一些代码。如果已经存在代码，请检查对应代码的参数是否填写完整。'
+                        title: 'Generate code failed',
+                        content: 'Code generation failed, please write some code. If a code already exists, check whether the parameters of the corresponding code are complete.'
                     });
                     return;
                 }
 
                 this.$Modal.success({
-                    title: '成功生成 JS 代码',
+                    title: 'Successfully generated JS code',
                     content: codeToText(code),
                     scrollable: true
                 });
@@ -104,8 +104,8 @@
 
                 if (code.trim() === '') {
                     this.$Modal.warning({
-                        title: '生成代码失败',
-                        content: '生成代码失败，请书写一些代码。如果已经存在代码，请检查对应代码的参数是否填写完整。'
+                        title: 'Generate code failed',
+                        content: 'Code generation failed, please write some code. If a code already exists, check whether the parameters of the corresponding code are complete.'
                     });
                     return;
                 }
@@ -114,8 +114,8 @@
                     new Function(code)();
                 } catch (e) {
                     this.$Modal.error({
-                        title: '代码运行失败',
-                        content: '生成代码失败，报错：' + e
+                        title: 'Code fails to run',
+                        content: 'Generated code failed with error: ' + e
                     });
                 }
             }

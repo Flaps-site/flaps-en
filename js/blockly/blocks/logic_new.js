@@ -4,18 +4,18 @@ Blockly.Blocks['logic_interval'] = {
     init: function() {
         this.appendValueInput("NAME")
             .setCheck("String")
-            .appendField("设置定时器名称");
+            .appendField("set a timer name");
         this.appendValueInput("TIME")
             .setCheck("Number")
-            .appendField("的间隔（毫秒）为");
+            .appendField("interval");
         this.appendStatementInput("STAT")
             .setCheck(null)
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setColour(210);
-        this.setTooltip('设置一个定时器。');
-        this.setHelpUrl('https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setInterval');
+        this.setTooltip('Set a timer.');
+        this.setHelpUrl('https://developer.mozilla.org/docs/Web/API/Window/setInterval');
     }
 }
 
@@ -24,13 +24,13 @@ Blockly.Blocks['logic_interval_clear'] = {
         this.appendValueInput('NAME')
             .setCheck('String')
             .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('清除定时器');
+            .appendField('clear a timer name');
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setColour(210);
-        this.setTooltip('清除一个定时器。');
-        this.setHelpUrl('https://developer.mozilla.org/zh-CN/docs/Web/API/window/clearInterval');
+        this.setTooltip('Clear a timer.');
+        this.setHelpUrl('https://developer.mozilla.org/docs/Web/API/window/clearInterval');
     }
 }
 
@@ -38,18 +38,18 @@ Blockly.Blocks['logic_timeout'] = {
     init: function() {
         this.appendValueInput("NAME")
             .setCheck("String")
-            .appendField("设置单次定时器名称");
+            .appendField("set a one-shot timer name");
         this.appendValueInput("TIME")
             .setCheck("Number")
-            .appendField("间隔（毫秒）为");
+            .appendField("interval");
         this.appendStatementInput("STAT")
             .setCheck(null)
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setColour(210);
-        this.setTooltip('设置一个单次定时器。');
-        this.setHelpUrl('https://developer.mozilla.org/zh-CN/docs/Web/API/Window/setTimeout');
+        this.setTooltip('Set a one-shot timer.');
+        this.setHelpUrl('https://developer.mozilla.org/docs/Web/API/Window/setTimeout');
     }
 }
 
@@ -58,12 +58,12 @@ Blockly.Blocks['logic_timeout_clear'] = {
         this.appendValueInput('NAME')
             .setCheck('String')
             .setAlign(Blockly.ALIGN_CENTRE)
-            .appendField('清除单次定时器');
+            .appendField('clear a one-shot timer name');
         this.setInputsInline(true);
         this.setPreviousStatement(true);
         this.setNextStatement(true);
         this.setColour(210);
-        this.setTooltip('清除一个单次定时器。');
-        this.setHelpUrl('https://developer.mozilla.org/zh-CN/docs/Web/API/window/clearTimeout');
+        this.setTooltip('Clear a one-shot timer.');
+        this.setHelpUrl('https://developer.mozilla.org/docs/Web/API/window/clearTimeout');
     }
 }

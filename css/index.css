@@ -24,7 +24,7 @@ header h1 {
 
 #header-right-btnGroup {
     height: 60px;
-    width: 300px;
+    width: 370px;
     position: absolute;
     right: 10px;
     top: 5px;
@@ -46,7 +46,7 @@ main {
 #tools-area {
     position: absolute;
     height: calc(100% - 60px);
-    width: 150px;
+    width: 200px;
     text-align: center;
     box-sizing: border-box;
     border-top: 1px solid #e2e2e2;
@@ -56,14 +56,14 @@ main {
 #clear-workspace-btn {
     position: absolute;
     bottom: 40px;
-    left: 16px;
+    left: 30px;
 }
 
 #blockly-area {
     position: absolute;
     right: 0;
     height: calc(100% - 60px);
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
 }
 
 #blockly-div {

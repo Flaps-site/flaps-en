@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="积木化编程, 儿童编程, 幼儿编程, 积木化代码生成器, blockly">
-    <meta name="description" content="Flaps 是在线的积木化编程网站，你可以用它简单编写运行在网页上的 JavaScript 代码！">
+    <meta name="keywords" content="block programming, child programming, toddler programming, blocky code generator, blockly">
+    <meta name="description" content="Flaps is an online blocky programming website that you can use it to generate JavaScript code and runs on web pages!">
     <meta name="author" content="Bill Dong">
     <link rel="icon" type="image/x-icon" href="img/logo.ico">
     <link rel="stylesheet" href="//unpkg.com/view-design/dist/styles/iview.css">
     <link rel="stylesheet" href="css/index.css">
     <!-- 51la -->
-    <script type="text/javascript" src="//js.users.51.la/20508703.js"></script>
-    <title>Flaps - 在线 JavaScript 积木化编程</title>
+    <script type="text/javascript" src="//js.users.51.la/20508743.js"></script>
+    <title>Flaps - Online JavaScript Blocky Programming</title>
 </head>
 
 <body>
@@ -25,31 +25,31 @@
             </a>
         </h1>
         <div id="header-right-btnGroup">
-            <i-button @click="generateAndRunCode" type="primary" shape="circle" icon="ios-play" title="直接生成并运行 JavaScript 代码"></i-button>
-            <i-button @click="generateCode">生成 JS 代码</i-button>
-            <i-button @click="downloadGenerateCode" type="primary">下载 JS 代码</i-button>
+            <i-button @click="generateAndRunCode" type="primary" shape="circle" icon="ios-play" title="Generate and run JavaScript code directly"></i-button>
+            <i-button @click="generateCode">Generate JS code</i-button>
+            <i-button @click="downloadGenerateCode" type="primary">Download JS code</i-button>
         </div>
     </header>
 
     <main>
         <div id="tools-area">
             <upload :before-upload="importBlockXMLFile" action="//jsonplaceholder.typicode.com/posts/">
-                <i-button icon="ios-cloud-upload-outline">导入块文件</i-button>
+                <i-button icon="ios-cloud-upload-outline">Import block file</i-button>
             </upload>
-            <i-button style="margin-top: 4px;" icon="ios-cloud-download-outline" @click="exportBlockXMLFile">导出块文件</i-button>
+            <i-button style="margin-top: 4px;" icon="ios-cloud-download-outline" @click="exportBlockXMLFile">Export block file</i-button>
             <br>
             <br>
             <br>
-            <i-button @click="clearWorkspace" id="clear-workspace-btn">清空工作空间</i-button>
-            <modal v-model="clearModal" title="你确定要清空工作空间吗？" @on-ok="clearModalOk">
-                <p style="color: red">清空工作空间后将无法恢复！请谨慎操作！</p>
+            <i-button @click="clearWorkspace" id="clear-workspace-btn">Clear workspace</i-button>
+            <modal v-model="clearModal" title="Are you sure you want to clear your workspace?" @on-ok="clearModalOk">
+                <p style="color: red">You cannot be restored after clearing the workspace! Please proceed with caution!</p>
             </modal>
         </div>
 
         <div id="blockly-area"></div>
         <div id="blockly-div"></div>
         <xml id="toolbox">
-            <category name="逻辑" colour="210">
+            <category name="Logic" colour="210">
                 <block type="logic_boolean"></block>
                 <block type="controls_if"></block>
                 <block type="controls_ifelse"></block>
@@ -62,7 +62,7 @@
                 <block type="logic_timeout"></block>
                 <block type="logic_timeout_clear"></block>
             </category>
-            <category name="动作" colour="180">
+            <category name="Action" colour="180">
                 <block type="action_alert"></block>
                 <block type="action_prompt"></block>
                 <block type="action_confirm"></block>
@@ -73,7 +73,7 @@
                 <block type="action_setAttr"></block>
                 <block type="action_setInner"></block>
             </category>
-            <category name="循环" colour="120">
+            <category name="Loop" colour="120">
                 <block type="controls_repeat_ext"></block>
                 <block type="controls_repeat"></block>
                 <block type="controls_whileUntil"></block>
@@ -81,7 +81,7 @@
                 <block type="controls_forEach"></block>
                 <block type="controls_flow_statements"></block>
             </category>
-            <category name="文本" colour="160">
+            <category name="Text" colour="160">
                 <block type="text"></block>
                 <block type="text_multiline"></block>
                 <block type="text_join"></block>
@@ -91,7 +91,7 @@
                 <block type="text_indexOf"></block>
                 <block type="text_charAt"></block>
             </category>
-            <category name="数学" colour="230">
+            <category name="Math" colour="230">
                 <block type="math_number"></block>
                 <block type="math_arithmetic"></block>
                 <block type="math_single"></block>
@@ -106,7 +106,7 @@
                 <block type="math_random_float"></block>
                 <block type="math_atan2"></block>
             </category>
-            <category name="数据" colour="40">
+            <category name="Data" colour="40">
                 <block type="data_to_number"></block>
                 <block type="data_to_boolean"></block>
                 <block type="data_typeof"></block>
@@ -129,14 +129,14 @@
                 <block type="data_date_get_now_time_number"></block>
                 <block type="data_date_get_time"></block>
             </category>
-            <category name="颜色" colour="20">
+            <category name="Colour" colour="20">
                 <block type="colour_picker"></block>
                 <block type="colour_random"></block>
                 <block type="colour_rgb"></block>
                 <block type="colour_blend"></block>
             </category>
-            <category name="变量" colour="330" custom="VARIABLE"></category>
-            <category name="函数" colour="290" custom="PROCEDURE"></category>
+            <category name="Variable" colour="330" custom="VARIABLE"></category>
+            <category name="Function" colour="290" custom="PROCEDURE"></category>
         </xml>
     </main>
 
@@ -152,7 +152,7 @@
     <script src="js/blockly/blocks/action.js"></script>
     <script src="js/blockly/blocks/logic_new.js"></script>
     <script src="js/blockly/blocks/data.js"></script>
-    <script src="js/blockly/msg/js/zh-hans.js"></script>
+    <script src="js/blockly/msg/js/en.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/index.js"></script>
 </body>
