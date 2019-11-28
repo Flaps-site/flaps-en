@@ -18,6 +18,11 @@
 
 <body>
     <header>
+        <div id="browser-language-change-modal">
+            <modal v-model="isShow" title="切换语言" @on-ok="changeLang">
+                <p>你的浏览器语言貌似是中文，是否要切换到中文版网站？</p>
+            </modal>
+        </div>
         <h1>
             <embed height="40px" src="img/logo.svg" type="image/svg+xml">
             <a style="color: black;" href="index.html">
